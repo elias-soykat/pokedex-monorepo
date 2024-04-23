@@ -18,8 +18,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-tsc": "npm install -D typescript -g",
     "build": "install-tsc && tsc",
+    "install-tsc": "npm install -D typescript -g",
     "clean": "rm -rf dist && rm -rf .turbo && rm -rf node_modules",
     "dev": "tsc -w",
     "lint": "eslint \"src/**/*.ts*\" --max-warnings 0"
