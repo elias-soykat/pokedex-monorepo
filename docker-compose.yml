@@ -1,11 +1,11 @@
 version: "3"
 
 services:
-  pokedex-redux:
-    container_name: pokedex-redux
+  pokedex-app:
+    container_name: pokedex-app
     build:
       context: .
-      dockerfile: ./apps/pokedex-redux/Dockerfile
+      dockerfile: ./packages/pokedex-reduxpokedex-redux/Dockerfile
       args:
         NODE_ENV: production
         NEXT_PUBLIC_API_URL: $NEXT_PUBLIC_API_URL

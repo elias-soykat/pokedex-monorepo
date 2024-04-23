@@ -6,7 +6,7 @@ RUN apk update
 WORKDIR /app
 RUN yarn global add turbo
 COPY . .
-RUN turbo prune --scope=pokedex-redux --docker
+RUN turbo prune --scope=pokedex-app --docker
 
 # Installer
 FROM node:alpine AS installer
@@ -32,7 +32,7 @@ COPY turbo.json turbo.json
 # ARG TURBO_TOKEN
 # ENV TURBO_TOKEN=$TURBO_TOKEN
 
-RUN turbo build --filter=pokedex-redux...
+RUN turbo build --filter=pokedex-app...
 
 # Runner
 FROM node:alpine AS runner
@@ -42,13 +42,10 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 USER nextjs
 
-COPY --from=installer /app/apps/pokedex-redux/next.config.mjs .
-COPY --from=installer /app/apps/pokedex-redux/package.json .
+COPY --from=installer /app/packages/pokedex-app/next.config.mjs .
+COPY --from=installer /app/packages/pokedex-app/package.json .
 
-# Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=installer --chown=nextjs:nodejs /app/apps/pokedex-redux/.next/standalone ./
-COPY --from=installer --chown=nextjs:nodejs /app/apps/pokedex-redux/.next/static ./apps/pokedex-redux/.next/static
-# COPY --from=installer --chown=nextjs:nodejs /app/apps/pokedex-redux/public ./apps/pokedex-redux/public
+COPY --from=installer --chown=nextjs:nodejs /app/packages/pokedex-app/.next/standalone ./
+COPY --from=installer --chown=nextjs:nodejs /app/packages/pokedex-app/.next/static ./packages/pokedex-app/.next/static
 
-CMD node apps/pokedex-redux/server.js
+CMD node packages/pokedex-app/server.js

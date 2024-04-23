@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
-import "../tailwind.config";
-import "../src/app/globals.css";
+import "../../pokedex-app/tailwind.config";
+import "../src/styles/globals.css";
 import "@repo/components/styles.css";
 
 const preview: Preview = {
