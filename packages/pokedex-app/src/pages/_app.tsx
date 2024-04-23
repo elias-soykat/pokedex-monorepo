@@ -11,7 +11,6 @@ import Providers from './proviers'
 const MyApp: FC<AppProps> = ({ Component, ...rest }) => {
   const { props } = wrapper.useWrappedStore(rest)
   const { pageProps } = props
-  console.log(process.env.NEXT_PUBLIC_API_URL)
 
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
