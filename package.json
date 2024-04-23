@@ -15,7 +15,7 @@
     "g:lint-staged-files": "lint-staged --allow-empty"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
+    "@repo/config-typescript": "workspace:*",
     "@types/node": "^20.11.24",
     "dotenv-cli": "^7.4.1",
     "eslint": "^8.57.0",

@@ -9,7 +9,7 @@ const nextConfig = {
     '@repo/eslint-config',
     '@repo/tailwind-config',
     '@repo/types',
-    '@repo/typescript-config'
+    '@repo/config-typescript'
   ],
   images: {
     remotePatterns: [

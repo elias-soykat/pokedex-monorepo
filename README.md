@@ -70,7 +70,7 @@ This Turborepo includes the following packages:
 - `@repo/types`: an ESM module with type definition with typescript shared by whole project
 - `@repo/utils`: a stub NodeJS library with Typescript shared by both `pokedex-app` and others applications
 - `@repo/eslint-config (packages/config-eslint)`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config (packages/config-typescript)`: `tsconfig.json`s used throughout the monorepo
+- `@repo/config-typescript (packages/config-typescript)`: `tsconfig.json`s used throughout the monorepo
 - `@repo/tailwind-config (packages/config-tailwind)`: `tailwind.config.ts`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
