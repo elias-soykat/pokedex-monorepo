@@ -1,4 +1,4 @@
-/* eslint-disable react/function-component-definition -- no-description*/
+/* eslint-disable react/function-component-definition -- no-description */
 
 import '@/styles/globals.css'
 import '@repo/components/styles.css'
@@ -9,6 +9,7 @@ import { FC } from 'react'
 import RootLayoutComponent from '@/components/layout'
 import wrapper from '@/store'
 import Providers from './proviers'
+
 
 const MyApp: FC<AppProps> = ({ Component, ...rest }) => {
   const { props } = wrapper.useWrappedStore(rest)

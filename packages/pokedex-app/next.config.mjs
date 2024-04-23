@@ -2,7 +2,15 @@
 const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
-  transpilePackages: ['@repo/components'],
+  transpilePackages: [
+    '@repo/components',
+    '@repo/utils',
+    '@next/eslint-plugin-next',
+    '@repo/eslint-config',
+    '@repo/tailwind-config',
+    '@repo/types',
+    '@repo/typescript-config'
+  ],
   images: {
     remotePatterns: [
       {
@@ -18,4 +26,3 @@ const nextConfig = {
 }
 
 export default nextConfig
-

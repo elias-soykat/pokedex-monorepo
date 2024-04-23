@@ -4,6 +4,9 @@
       "mode": "auto"
     }
   ],
-  "cSpell.words": ["autodocs", "nextjs", "Pokedex", "Pokemons", "reduxjs", "tailwindcss"]
-}
+  "cSpell.words": ["autodocs", "nextjs", "Pokedex", "Pokemons", "reduxjs", "tailwindcss"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },}
 
