@@ -1,21 +1,21 @@
-import PokemonTypeTagComponent from "@repo/components/pokemon/type";
-import { TPokemonTypeEnum } from "@repo/types";
-import type { Meta, StoryObj } from "@storybook/react";
+import PokemonTypeTagComponent from '@repo/components/pokemon/type'
+import { TPokemonTypeEnum } from '@repo/types'
+import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<typeof PokemonTypeTagComponent> = {
-  title: "UI/Pokemon/PokemonTypeTag",
+  title: 'UI/Pokemon/PokemonTypeTag',
   component: PokemonTypeTagComponent,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <div
         style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "auto",
-          margin: "auto",
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: 'auto',
+          margin: 'auto',
         }}
       >
         <div>
@@ -24,11 +24,11 @@ const meta: Meta<typeof PokemonTypeTagComponent> = {
       </div>
     ),
   ],
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof PokemonTypeTagComponent>;
+type Story = StoryObj<typeof PokemonTypeTagComponent>
 
 export const Normal: Story = {
   args: {
@@ -37,7 +37,7 @@ export const Normal: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Fighting: Story = {
   args: {
@@ -46,7 +46,7 @@ export const Fighting: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Flying: Story = {
   args: {
@@ -55,7 +55,7 @@ export const Flying: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Poison: Story = {
   args: {
@@ -64,7 +64,7 @@ export const Poison: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Ground: Story = {
   args: {
@@ -73,7 +73,7 @@ export const Ground: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Rock: Story = {
   args: {
@@ -82,7 +82,7 @@ export const Rock: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Bug: Story = {
   args: {
@@ -91,7 +91,7 @@ export const Bug: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Ghost: Story = {
   args: {
@@ -100,7 +100,7 @@ export const Ghost: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Steel: Story = {
   args: {
@@ -109,7 +109,7 @@ export const Steel: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Fire: Story = {
   args: {
@@ -118,7 +118,7 @@ export const Fire: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Water: Story = {
   args: {
@@ -127,7 +127,7 @@ export const Water: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Grass: Story = {
   args: {
@@ -136,7 +136,7 @@ export const Grass: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Electric: Story = {
   args: {
@@ -145,7 +145,7 @@ export const Electric: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Physical: Story = {
   args: {
@@ -154,7 +154,7 @@ export const Physical: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Ice: Story = {
   args: {
@@ -163,7 +163,7 @@ export const Ice: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Dragon: Story = {
   args: {
@@ -172,7 +172,7 @@ export const Dragon: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Dark: Story = {
   args: {
@@ -181,7 +181,7 @@ export const Dark: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Fairy: Story = {
   args: {
@@ -190,7 +190,7 @@ export const Fairy: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Unknown: Story = {
   args: {
@@ -199,7 +199,7 @@ export const Unknown: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export const Shadow: Story = {
   args: {
@@ -208,5 +208,4 @@ export const Shadow: Story = {
   parameters: {
     controls: { expanded: true },
   },
-};
-
+}

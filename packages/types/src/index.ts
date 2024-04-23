@@ -1,3 +1,3 @@
-export * from "./pokemon";
-export * from "./request";
-export * from "./response";
+export * from './pokemon'
+export * from './request'
+export * from './response'

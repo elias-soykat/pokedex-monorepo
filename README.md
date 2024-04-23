@@ -2,7 +2,7 @@
 
 This is Pokedex app built with NextJS, Redux, Typescript and Tailwindcss
 
-!! Attention: `packages/pokedex-app` is page router, because the module `next-redux-wrapper` is only available for pages router of NextJS application, `pokedex-app` is built with pages router and `@mui/x-data-grid` is used for first page.
+This packages/pokedex-app uses the Next.js 14 page router instead of the app router because the module `next-redux-wrapper` is only available for the page router of a Next.js application.
 
 ## Run this project
 
@@ -28,13 +28,14 @@ or you can run the project by docker
 docker compose up -d
 ```
 
-Then you can browse the example apps on [pokedex-app](http://localhost:3000)
+<br/>
+Then you can browse the example apps on [http://localhost:3000](http://localhost:3000)
+<br/>
 
 ![324272028-c9be4802-2925-4d53-9c88-44cb01e9ed20](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/64af0eff-05cf-47a0-87e2-bdf0244e5504)
 ![324272016-a4287c26-0892-48f2-88c2-8621d01907aa](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/689dc929-33d0-4e36-85cd-2b7fc52a1d3a)
 ![324271960-3427852b-b85d-4f88-aea8-c914ebaa148d](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/f80b340d-5a3e-46e5-a37f-39af3a921f70)
 ![324271919-861c3552-354e-4fd1-bd27-a00c2fd577c2](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/3baa1a3a-10fd-4008-86d8-5134a60b8988)
-
 
 And this project contains storybook for shared components defined in `@repo/components` package
 
@@ -44,8 +45,12 @@ Storybook is defined in `pokedex` (apps/pokedex)
 pnpm storybook
 ```
 
-Then you can browse the storybook on [Storybook](http://localhost:6006)
+Then you can browse the storybook on [http://localhost:6006](http://localhost:6006)
+<br/>
+<br/>
 ![324217045-1735c3a9-8c0f-40cd-ac6a-733418153952](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/da1780f0-11df-43c7-accb-3debdf7821d9)
+
+<br/>
 
 ## What kind of this project?
 
@@ -55,7 +60,7 @@ They share config files for typescript, eslint, tailwindcss
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+This Turborepo includes the following packages:
 
 ### Apps and Packages
 
@@ -69,4 +74,3 @@ This Turborepo includes the following packages/apps:
 - `@repo/tailwind-config (packages/config-tailwind)`: `tailwind.config.ts`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-

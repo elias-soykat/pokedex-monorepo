@@ -1,13 +1,13 @@
-import type { TPokemonDetails } from "@repo/types";
-import Button from "../common/button";
-import PokemonTypeTagComponent, { pokemonTypeStyleVariants } from "./type";
+import type { TPokemonDetails } from '@repo/types'
+import Button from '../common/button'
+import PokemonTypeTagComponent, { pokemonTypeStyleVariants } from './type'
 
 export default function PokemonDetailCardComponent({
   details,
   onBackClick,
 }: {
-  details: TPokemonDetails;
-  onBackClick?: () => void;
+  details: TPokemonDetails
+  onBackClick?: () => void
 }): JSX.Element {
   return (
     <div className="bg-slate-400/30 dark:bg-slate-800/30 mb-10 backdrop-blur-lg border shadow-md dark:border-slate-500/30 border-slate-400/30 rounded-3xl w-72 sm:w-80 text-slate-600 dark:text-white flex flex-col items-center gap-2 relative">
@@ -21,7 +21,7 @@ export default function PokemonDetailCardComponent({
           alt={details.name}
           className="-translate-y-28 w-56 h-56 lg:w-64 lg:h-6w-64"
           height={96}
-          src={details.imgSrc ?? ""}
+          src={details.imgSrc ?? ''}
           width={96}
         />
         {onBackClick ? (
@@ -29,18 +29,14 @@ export default function PokemonDetailCardComponent({
             className="absolute left-4 top-4 z-10"
             color="light"
             onClick={() => {
-              onBackClick();
+              onBackClick()
             }}
             rounded="full"
           >
             Back
           </Button>
         ) : null}
-        <Button
-          className="absolute right-4 bottom-4 z-10"
-          color="dark"
-          rounded="full"
-        >
+        <Button className="absolute right-4 bottom-4 z-10" color="dark" rounded="full">
           #{details.paddedId}
         </Button>
       </div>
@@ -62,11 +58,9 @@ export default function PokemonDetailCardComponent({
         <div className="flex flex-col space-y-2 w-full z-10 gap-1">
           {details.stats.map((stat) => (
             <div className="flex items-center" key={stat.name}>
-              <div className="font-bold text-sm leading-8 w-8/12 capitalize">
-                {stat.name}
-              </div>
+              <div className="font-bold text-sm leading-8 w-8/12 capitalize">{stat.name}</div>
               <div className="w-4/6 relative">
-                {stat.name === "total" ? (
+                {stat.name === 'total' ? (
                   stat.value
                 ) : (
                   <div className="bg-white dark:bg-slate-900 w-full h-2 rounded-full">
@@ -82,6 +76,5 @@ export default function PokemonDetailCardComponent({
         </div>
       </div>
     </div>
-  );
+  )
 }
-

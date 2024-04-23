@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "@repo/eslint-config/next.js",
-    "plugin:storybook/recommended"
-  ],
+  "extends": ["@repo/eslint-config/next.js", "plugin:storybook/recommended"],
   "rules": {
     "import/no-unresolved": [
       2,
@@ -13,3 +10,4 @@
     "@typescript-eslint/consistent-type-imports": "off"
   }
 }
+

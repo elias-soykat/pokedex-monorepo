@@ -1,9 +1,9 @@
 export interface TPokemonAPIPaginatedRequest {
-  offset: number | undefined;
-  limit: number | undefined;
+  offset: number | undefined
+  limit: number | undefined
 }
 
 export enum TPokemonAPIEndpointEnum {
-  Pokemon = "pokemon",
-  PokemonForm = "pokemon-form",
+  Pokemon = 'pokemon',
+  PokemonForm = 'pokemon-form',
 }

@@ -1,11 +1,13 @@
-import RootLayoutComponent from '@/components/layout'
-import wrapper from '@/store'
+/* eslint-disable react/function-component-definition -- no-description*/
+
 import '@/styles/globals.css'
 import '@repo/components/styles.css'
 import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { FC } from 'react'
+import RootLayoutComponent from '@/components/layout'
+import wrapper from '@/store'
 import Providers from './proviers'
 
 const MyApp: FC<AppProps> = ({ Component, ...rest }) => {
@@ -27,4 +29,3 @@ const MyApp: FC<AppProps> = ({ Component, ...rest }) => {
 }
 
 export default wrapper.withRedux(MyApp)
-
