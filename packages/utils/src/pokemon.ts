@@ -35,7 +35,6 @@ export function formatStats(stats: TPokemonStat[]): { name: string; value: numbe
     return {
       name: removeHyphens(stat.name),
       value: base_stat,
-  // @ts-ignore 
       max: statsMaxValues[stat.name],
     }
   })
@@ -50,9 +49,7 @@ export const formatPokemonData = (pokemon: TPokemon): TPokemonDetails => {
 
   const weightInKg = weight / 10
   const heightInMeter = height / 10
-  // @ts-ignore 
   const paddedId = String(id).padStart(3, '0')
-  // @ts-ignore 
   const formattedTypes = types.map(({ type }) => type)
   const formattedStats = formatStats(pokemon.stats)
   const pokemonImg = sprites.other.dream_world.front_default || sprites.other['official-artwork'].front_default
