@@ -1,8 +1,8 @@
-version: "3"
+version: '3'
 
 services:
-  pokedex-app:
-    container_name: pokedex-app
+  pokedex-redux:
+    container_name: pokedex-redux
     build:
       context: .
       dockerfile: ./packages/pokedex-app/Dockerfile
@@ -13,6 +13,8 @@ services:
       - 3000:3000
     networks:
       - local
+    volumes:
 
 networks:
   local:
+

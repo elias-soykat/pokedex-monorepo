@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import PokemonDetailCardComponent from "@repo/components/components/pokemon/pokemon-detail-card";
+import PokemonDetailCardComponent from "@repo/components/pokemon/pokemon-detail-card";
 import type { TPokemonDetails } from "@repo/types";
 import sampleDetails from "./pokemon-detail.json";
 

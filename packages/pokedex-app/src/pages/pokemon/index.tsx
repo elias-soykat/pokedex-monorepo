@@ -1,19 +1,19 @@
+import useAppDispatch from "@/hooks/use-app-dispatch";
+import useAppSelector from "@/hooks/use-app-selector";
+import { fetchPokemonDetail, fetchPokemons } from "@/store/pokemon/thunk";
 import type { GridColDef } from "@mui/x-data-grid";
 import { DataGrid } from "@mui/x-data-grid";
+import Button from "@repo/components/common/button";
+import PokemonTypeTagComponent from "@repo/components/pokemon/type";
 import type {
   TBasicItem,
   TPokemonDetails,
   TPokemonTypeEnum,
 } from "@repo/types";
-import Button from "@repo/components/components/common/button";
-import PokemonTypeTagComponent from "@repo/components/components/pokemon/type";
 import { parsePokemonId } from "@repo/utils";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useMemo } from "react";
-import Image from "next/image";
-import { fetchPokemonDetail, fetchPokemons } from "@/store/pokemon/thunk";
-import useAppSelector from "@/hooks/use-app-selector";
-import useAppDispatch from "@/hooks/use-app-dispatch";
 
 export default function IndexPage() {
   const { items, pokemons, page, limit, hasNext, hasPrev, isLoading, total } =

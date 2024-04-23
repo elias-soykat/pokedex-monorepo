@@ -1,4 +1,4 @@
-import NavbarComponent from "@repo/components/components/common/layout/navbar";
+import NavbarComponent from "@repo/components/common/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -15,6 +15,7 @@ export default function RootLayoutComponent({
     <div className="min-h-screen relative w-screen flex flex-col">
       <Image
         alt="pokemon"
+        priority={false}
         className="absolute object-cover top-20 left-0 w-screen h-screen z-0 opacity-5"
         height="1080"
         src="https://images.unsplash.com/photo-1627693685101-687bf0eb1222?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -42,3 +43,4 @@ export default function RootLayoutComponent({
     </div>
   );
 }
+

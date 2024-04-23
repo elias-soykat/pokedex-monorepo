@@ -1,13 +1,13 @@
 "use client";
 
-import { useRouter } from "next/router";
-import { useEffect, useMemo } from "react";
+import useAppDispatch from "@/hooks/use-app-dispatch";
+import useAppSelector from "@/hooks/use-app-selector";
+import { fetchPokemonDetail } from "@/store/pokemon/thunk";
 import { ChevronLeftRounded } from "@mui/icons-material";
 import { CircularProgress, IconButton, Typography } from "@mui/material";
-import PokemonDetailCardComponent from "@repo/components/components/pokemon/pokemon-detail-card";
-import { fetchPokemonDetail } from "@/store/pokemon/thunk";
-import useAppSelector from "@/hooks/use-app-selector";
-import useAppDispatch from "@/hooks/use-app-dispatch";
+import PokemonDetailCardComponent from "@repo/components/pokemon/pokemon-detail-card";
+import { useRouter } from "next/router";
+import { useEffect, useMemo } from "react";
 
 export default function PokemonPage() {
   const router = useRouter();

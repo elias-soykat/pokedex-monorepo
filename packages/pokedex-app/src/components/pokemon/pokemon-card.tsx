@@ -1,5 +1,5 @@
 import type { TBasicItem } from "@repo/types";
-import PokemonCardComponent from "@repo/components/components/pokemon/card";
+import PokemonCardComponent from "@repo/components/pokemon/card";
 import { parsePokemonId } from "@repo/utils";
 import Link from "next/link";
 import { useEffect, useMemo } from "react";

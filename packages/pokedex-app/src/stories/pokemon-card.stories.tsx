@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import type { TPokemonDetails } from "@repo/types";
-import PokemonCardComponent from "@repo/components/components/pokemon/card";
+import PokemonCardComponent from "@repo/components/pokemon/card";
 import sampleDetails from "./pokemon-detail.json";
 
 const meta: Meta<typeof PokemonCardComponent> = {

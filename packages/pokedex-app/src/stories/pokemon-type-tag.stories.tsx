@@ -1,4 +1,4 @@
-import PokemonTypeTagComponent from "@repo/components/components/pokemon/type";
+import PokemonTypeTagComponent from "@repo/components/pokemon/type";
 import { TPokemonTypeEnum } from "@repo/types";
 import type { Meta, StoryObj } from "@storybook/react";
 

@@ -1,21 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
+  output: 'standalone',
   reactStrictMode: true,
-  transpilePackages: ["@repo/components"],
+  transpilePackages: ['@repo/components'],
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "raw.githubusercontent.com",
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
       },
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
     ],
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
 
