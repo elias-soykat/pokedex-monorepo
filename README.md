@@ -30,10 +30,11 @@ docker compose up -d
 
 Then you can browse the example apps on [Pokedex-redux](http://localhost:3000)
 
-![image](https://github.com/dragon1227/pokemon-explorer/assets/122885050/861c3552-354e-4fd1-bd27-a00c2fd577c2)
-![image](https://github.com/dragon1227/pokemon-explorer/assets/122885050/3427852b-b85d-4f88-aea8-c914ebaa148d)
-![image](https://github.com/dragon1227/pokemon-explorer/assets/122885050/a4287c26-0892-48f2-88c2-8621d01907aa)
-![image](https://github.com/dragon1227/pokemon-explorer/assets/122885050/c9be4802-2925-4d53-9c88-44cb01e9ed20)
+![324272028-c9be4802-2925-4d53-9c88-44cb01e9ed20](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/64af0eff-05cf-47a0-87e2-bdf0244e5504)
+![324272016-a4287c26-0892-48f2-88c2-8621d01907aa](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/689dc929-33d0-4e36-85cd-2b7fc52a1d3a)
+![324271960-3427852b-b85d-4f88-aea8-c914ebaa148d](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/f80b340d-5a3e-46e5-a37f-39af3a921f70)
+![324271919-861c3552-354e-4fd1-bd27-a00c2fd577c2](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/3baa1a3a-10fd-4008-86d8-5134a60b8988)
+
 
 And this project contains storybook for shared components defined in `@repo/components` package
 
@@ -44,7 +45,7 @@ pnpm storybook
 ```
 
 Then you can browse the storybook on [Storybook](http://localhost:6006)
-![image](https://github.com/dragon1227/pokemon-explorer/assets/122885050/1735c3a9-8c0f-40cd-ac6a-733418153952)
+![324217045-1735c3a9-8c0f-40cd-ac6a-733418153952](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/da1780f0-11df-43c7-accb-3debdf7821d9)
 
 ## What kind of this project?
 
