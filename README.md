@@ -2,7 +2,7 @@
 
 This is Pokedex app built with NextJS, Redux, Typescript and Tailwindcss
 
-!!! Attention: `packages/pokedex-redux` is page router, because the module `next-redux-wrapper` is only available for pages router of NextJS application, `pokedex-app` is built with pages router and `@mui/x-data-grid` is used for first page.
+!! Attention: `packages/pokedex-app` is page router, because the module `next-redux-wrapper` is only available for pages router of NextJS application, `pokedex-app` is built with pages router and `@mui/x-data-grid` is used for first page.
 
 ## Run this project
 
@@ -28,7 +28,7 @@ or you can run the project by docker
 docker compose up -d
 ```
 
-Then you can browse the example apps on [Pokedex-redux](http://localhost:3000)
+Then you can browse the example apps on [pokedex-app](http://localhost:3000)
 
 ![324272028-c9be4802-2925-4d53-9c88-44cb01e9ed20](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/64af0eff-05cf-47a0-87e2-bdf0244e5504)
 ![324272016-a4287c26-0892-48f2-88c2-8621d01907aa](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/689dc929-33d0-4e36-85cd-2b7fc52a1d3a)
@@ -59,11 +59,11 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `pokedex-app (apps/pokedex-app)`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/) in Pages router with next-redux-wrapper and @reduxjs/toolkit
-- `pokedex (apps/pokedex)`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/) in App router with @tanstack/react-query and storybook
-- `@repo/components`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `pokedex-app` and `pokedex` applications
+- `pokedex-app (packages/pokedex-app)`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/) in Pages router with next-redux-wrapper, @reduxjs/toolkit, storybook
+
+- `@repo/components`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `pokedex-app` and others applications
 - `@repo/types`: an ESM module with type definition with typescript shared by whole project
-- `@repo/utils`: a stub NodeJS library with Typescript shared by both `pokedex-app` and `pokedex` applications
+- `@repo/utils`: a stub NodeJS library with Typescript shared by both `pokedex-app` and others applications
 - `@repo/eslint-config (packages/config-eslint)`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config (packages/config-typescript)`: `tsconfig.json`s used throughout the monorepo
 - `@repo/tailwind-config (packages/config-tailwind)`: `tailwind.config.ts`s used throughout the monorepo

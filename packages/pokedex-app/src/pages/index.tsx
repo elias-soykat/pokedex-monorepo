@@ -42,7 +42,7 @@ export default function IndexPage() {
     {
       field: "imgSrc",
       headerName: "Image",
-      width: isSM ? 90 : 75,
+      width: isSM ? 95 : 75,
       renderCell(params) {
         return (
           <Image

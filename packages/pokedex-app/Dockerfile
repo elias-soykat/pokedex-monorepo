@@ -32,7 +32,7 @@ COPY turbo.json turbo.json
 # ARG TURBO_TOKEN
 # ENV TURBO_TOKEN=$TURBO_TOKEN
 
-RUN turbo build --filter=pokedex-app...
+RUN turbo build --filter=pokedex-app
 
 # Runner
 FROM node:alpine AS runner
