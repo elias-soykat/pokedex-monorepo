@@ -15,7 +15,6 @@ export interface INavbar {
 }
 
 export default function NavbarComponent(props: INavbar): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- no need for definition
   const { navigate, items, logo, title, children } = props
   const handleNavigate = (path?: string): void => {
     if (navigate) navigate(path ?? '#')

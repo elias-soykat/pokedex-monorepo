@@ -8,7 +8,7 @@ import Head from 'next/head'
 import { FC } from 'react'
 import RootLayoutComponent from '@/components/layout'
 import wrapper from '@/store'
-import Providers from './proviers'
+import Providers from '../components/common/providers'
 
 
 const MyApp: FC<AppProps> = ({ Component, ...rest }) => {
