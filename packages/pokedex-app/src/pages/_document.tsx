@@ -11,6 +11,7 @@ export default function Document() {
         <meta content="920" property="og:image:width" />
         <meta content="470" property="og:image:height" />
         <meta content="summary_large_image" name="twitter:card" />
+        <meta content="Pokedex application" name="description" />
 
         <meta content="Pokedex application for everyone" property="og:site_name" />
         <meta content="JavaScript developer, TypeScript developer, Web developer" name="keywords" />
