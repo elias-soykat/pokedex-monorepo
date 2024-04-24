@@ -29,7 +29,9 @@ docker compose up -d
 ```
 
 <br/>
+
 Then you can browse the example apps on [http://localhost:3000](http://localhost:3000)
+
 <br/>
 
 ![324272028-c9be4802-2925-4d53-9c88-44cb01e9ed20](https://github.com/elias-soykat/pokedex-monorepo/assets/76895393/64af0eff-05cf-47a0-87e2-bdf0244e5504)
