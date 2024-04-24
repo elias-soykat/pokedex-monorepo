@@ -1,8 +1,8 @@
 {
   "name": "pokemon-app",
   "version": "1.0.0",
-  "description": "Next.js monorepo Pokemon Explorer",
-  "author": "dragon99steel@gmail.com",
+  "description": "Next.js monorepo pokemon-app",
+  "author": "eliasmd624@gmail.com",
   "private": true,
   "scripts": {
     "build": "turbo build --output public",
