@@ -9,7 +9,7 @@ const nextConfig = {
     '@repo/eslint-config',
     '@repo/tailwind-config',
     '@repo/types',
-    '@repo/config-typescript'
+    '@repo/config-typescript',
   ],
   images: {
     remotePatterns: [
@@ -19,10 +19,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname: 'nextventures.fra1.cdn.digitaloceanspaces.com',
       },
     ],
   },
 }
 
 export default nextConfig
+

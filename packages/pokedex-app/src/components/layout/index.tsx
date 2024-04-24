@@ -8,19 +8,11 @@ import ThemeSwitchComponent from '../common/theme-switch'
 export default function RootLayoutComponent({ children }: { children: ReactNode }) {
   const router = useRouter()
   return (
-    <div className="min-h-screen relative w-screen flex flex-col">
-      <Image
-        alt="pokemon"
-        className="absolute object-cover top-20 left-0 w-screen h-screen z-0 opacity-5"
-        height="1080"
-        priority={false}
-        src="https://images.unsplash.com/photo-1627693685101-687bf0eb1222?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        width="1920"
-      />
+    <>
       <NavbarComponent
         logo={
-          <Link className="cursor-pointer" href="/">
-            <Image alt="logo" className="h-8 cursor-pointer" height={30} src="/logo.svg" width={150} />
+          <Link href="/">
+            <Image alt="logo" className="h-8" height={30} src="/logo.svg" width={150} />
           </Link>
         }
         navigate={(path) => {
@@ -29,7 +21,16 @@ export default function RootLayoutComponent({ children }: { children: ReactNode 
       >
         <ThemeSwitchComponent />
       </NavbarComponent>
-      <main className="container mx-auto relative">{children}</main>
-    </div>
+      <main className="w-full flex-1 relative z-20 overflow-auto">
+        <Image
+          alt="pokemon"
+          className="absolute object-cover -top-20 z-0 left-0 w-full h-full opacity-[0.03]"
+          height="1080"
+          src="https://nextventures.fra1.cdn.digitaloceanspaces.com/web-background-img.webp"
+          width="1920"
+        />
+        <div className="container h-full z-10 overflow-auto mx-auto relative">{children}</div>
+      </main>
+    </>
   )
 }

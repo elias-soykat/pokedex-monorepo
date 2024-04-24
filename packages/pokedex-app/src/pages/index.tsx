@@ -1,4 +1,3 @@
-import { useEffect, useMemo } from 'react'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
 import { CircularProgress, IconButton, Typography, useMediaQuery } from '@mui/material'
 import type { GridColDef } from '@mui/x-data-grid'
@@ -6,9 +5,10 @@ import { DataGrid } from '@mui/x-data-grid'
 import { getPokemonImage, parsePokemonId } from '@repo/utils'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import useAppDispatch from '@/hooks/use-app-dispatch'
+import { useEffect, useMemo } from 'react'
 import { fetchPokemons } from '@/store/pokemon/thunk'
 import useAppSelector from '@/hooks/use-app-selector'
+import useAppDispatch from '@/hooks/use-app-dispatch'
 
 export default function IndexPage() {
   const { items, page, limit, hasNext, isLoading, total } = useAppSelector((state) => state.pokemon)
@@ -17,7 +17,7 @@ export default function IndexPage() {
     if (!items) {
       dispatch(fetchPokemons({ page, limit }))
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- no-description
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- no-description
   }, [])
 
   const dispatch = useAppDispatch()
@@ -28,7 +28,7 @@ export default function IndexPage() {
     {
       field: 'id',
       headerName: 'ID',
-      width: isSM ? 120 : 50,
+      width: isSM ? 100 : 50,
       renderCell(params) {
         return <span className="pl-1">{params.id}</span>
       },
@@ -36,10 +36,18 @@ export default function IndexPage() {
     {
       field: 'imgSrc',
       headerName: 'Image',
-      width: isSM ? 95 : 75,
+      width: isSM ? 110 : 75,
       renderCell(params) {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- no-description
-        return <Image alt={params.row?.name} className="w-4/12 mt-3" height={20} src={params.value} width={20} />
+        return (
+          <Image
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- no-description
+            alt={params.row?.name}
+            className="w-[25%] mt-3"
+            height={20}
+            src={params.value}
+            width={20}
+          />
+        )
       },
     },
     {
@@ -54,13 +62,14 @@ export default function IndexPage() {
     {
       field: 'action',
       headerName: 'Action',
-      width: 120,
+      width: 130,
       renderCell(params) {
         return (
           <IconButton
             onClick={() => {
               router.push(`/pokemon/${params.id}`)
             }}
+            type="button"
           >
             <RemoveRedEyeIcon />
           </IconButton>
@@ -83,17 +92,17 @@ export default function IndexPage() {
   }
 
   return (
-    <div className="flex-1 sm:p-4">
-      <div className="w-full flex items-center mb-5 mt-3">
+    <div className="flex-1 sm:p-4 ml-4 mr-2 lg:ml-8">
+      <div className="w-full flex items-center my-7">
         {isLoading ? <CircularProgress size={30} style={{ marginRight: '20px' }} /> : null}
         <Typography variant="h6">{total} Pokemons In Total</Typography>
       </div>
-      <div className="h-[632px]">
+      <div>
         <DataGrid
           columns={columns}
           loading={isLoading}
           onPaginationModelChange={onPagination}
-          pageSizeOptions={[10]}
+          pageSizeOptions={[10, 20, 50]}
           pagination
           paginationMeta={{
             hasNextPage: hasNext,
@@ -104,6 +113,8 @@ export default function IndexPage() {
             pageSize: limit,
           }}
           rowCount={total}
+          rowHeight={isSM ? 60 : 50}
+          rowSelection={false}
           rows={rows}
         />
       </div>

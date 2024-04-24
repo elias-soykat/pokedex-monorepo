@@ -1,13 +1,13 @@
 'use client'
 
-import { ChevronLeftRounded } from '@mui/icons-material'
-import { CircularProgress, IconButton, Typography } from '@mui/material'
+import { ArrowBackOutlined } from '@mui/icons-material'
+import { Button, CircularProgress } from '@mui/material'
 import PokemonDetailCardComponent from '@repo/components/pokemon/pokemon-detail-card'
 import { useRouter } from 'next/router'
 import { useEffect, useMemo } from 'react'
-import useAppDispatch from '@/hooks/use-app-dispatch'
-import useAppSelector from '@/hooks/use-app-selector'
 import { fetchPokemonDetail } from '@/store/pokemon/thunk'
+import useAppSelector from '@/hooks/use-app-selector'
+import useAppDispatch from '@/hooks/use-app-dispatch'
 
 export default function PokemonPage() {
   const router = useRouter()
@@ -28,19 +28,21 @@ export default function PokemonPage() {
     router.push('/')
   }
   return (
-    <div className="flex-1 flex flex-col p-4">
-      <div className="flex items-center gap-4">
-        <IconButton onClick={onBackClick}>
-          <ChevronLeftRounded />
-        </IconButton>
-        <Typography>Back</Typography>
-      </div>
+    <div className="flex flex-col">
+      <Button
+        className="items-center inline-flex w-24 border justify-start gap-3 ml-8 mt-4"
+        onClick={onBackClick}
+        startIcon={<ArrowBackOutlined className="ml-1" />}
+        type="button"
+      >
+        <span className="-ml-1">Back</span>
+      </Button>
       {!details ? (
         <div className="m-auto">
           <CircularProgress />
         </div>
       ) : (
-        <div className="mx-auto mt-32">
+        <div className="mx-auto mt-24 lg:mt-28 xl:mt-32">
           <PokemonDetailCardComponent details={details} />
         </div>
       )}
