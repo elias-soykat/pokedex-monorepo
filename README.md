@@ -19,13 +19,15 @@ Run the following command:
 ```sh
 npm install -g turbo
 pnpm install
+
+cp .env.example .env
 pnpm dev
 ```
 
 or you can run the project by docker
 
 ```sh
-docker compose up -d
+docker compose up --build
 ```
 
 <br/>

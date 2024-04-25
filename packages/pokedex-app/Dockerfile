@@ -23,6 +23,7 @@ WORKDIR /app
 
 # First install the dependencies (as they change less often)
 COPY .gitignore .gitignore
+COPY .env.example .env
 COPY --from=builder /app/out/json/ .
 COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
 RUN pnpm install --filter=pokedex-app
@@ -30,6 +31,7 @@ RUN pnpm install --filter=pokedex-app
 # Build the project
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
+
 
 RUN pnpm build --filter=pokedex-app
 
@@ -53,4 +55,4 @@ COPY --from=installer --chown=nextjs:nodejs /app/packages/pokedex-app/.next/stan
 COPY --from=installer --chown=nextjs:nodejs /app/packages/pokedex-app/.next/static ./packages/pokedex-app/.next/static
 COPY --from=installer --chown=nextjs:nodejs /app/packages/pokedex-app/public ./packages/pokedex-app/public
 
-CMD node /app/packages/pokedex-app/server.js
+CMD [ "pnpm", "run", "dev" ]
